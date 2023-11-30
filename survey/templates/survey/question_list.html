@@ -10,37 +10,44 @@
                         <span class="fw-bold">{{ question.title }}</span>
                     </div>
                     <div class="col-2">
-                        <span class="fw-lighter">Autor:</span> {{ question.author }}
+                        <span class="fw-lighter">Autor:</span> {{ question.author_name }}
                     </div>
                 </div>
-                <br>
+                <br />
                 <div class="d-flex justify-content-between">
                     <div class="d-flex flex-column col-4">
                         <u class="fw-lighter mb-1">Respuesta</u>
                         <div>
-                            {% for val in '12345' %}
-                                <a class="mx-1 answer {% if question.user_value|slugify == val %}fas{% else %}fal{% endif %} fa-star text-decoration-none"
-                                   data-question="{{ question.pk }}"
-                                   data-value="{{ val }}" href="#"></a>
+                            {% for val in answers %}
+                                <a class="mx-1 answer {% if question.answered == val %}fas{% else %}fal{% endif %} fa-star text-decoration-none"
+                                   data-question="{{ question.id }}"
+                                   data-value="{{ val }}"
+                                   href="#"></a>
                             {% endfor %}
                         </div>
                     </div>
                     <div class="col-4 d-flex flex-column ">
                         <u class="fw-lighter mb-1">Evalúa la pregunta</u>
                         <div>
-                            <a class="mx-1 like {% if question.user_likes %}fas{% else %}fal{% endif %} fa-thumbs-up text-decoration-none"
-                               href="#" data-question="{{ question.pk }}" data-value="like" ></a>
-                            <a class="mx-1 like {% if question.user_dislikes %}fas{% else %}fal{% endif %} fa-thumbs-up fa-flip-both text-decoration-none"
-                               href="#" data-question="{{ question.pk }}" data-value="dislike"></a>
+                            <a class="mx-1 like {% if question.liked %}fas{% else %}fal{% endif %} fa-thumbs-up text-decoration-none"
+                               href="#"
+                               data-question="{{ question.id }}"
+                               data-value="like"></a>
+                            <a class="mx-1 like {% if question.liked == False %}fas{% else %}fal{% endif %} fa-thumbs-up fa-flip-both text-decoration-none"
+                               href="#"
+                               data-question="{{ question.id }}"
+                               data-value="dislike"></a>
                         </div>
                     </div>
                     <div class="col-2">
                         <u class="fw-lighter mb-1">Ranking:</u>
-                        <div>
-                           {{ question.ranking }} pts.
-                        </div>
-
-
+                        <div>{{ question.ranking }} pts.</div>
+                        {% if question.author_pk == user.id %}
+                            <a class="mx-1 fas fa-edit text-decoration-none"
+                               href="{% url 'survey:question-edit' pk=question.id %}"></a>
+                            <a class="mx-1 fas fa-trash text-decoration-none"
+                               href="{% url 'survey:question-delete' pk=question.id %}"></a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -49,11 +56,59 @@
         {% endfor %}
     </div>
 {% endblock %}
-
 {% block js %}
     <script>
+        function rateAnswer(evt){
+            const questionId = this.dataset.question;
+            const rate = this.dataset.value;
+            $.ajax({
+                type: 'POST',
+                url: "{%url 'survey:question-answer' %}",
+                headers: { 'X-CSRFToken': '{{csrf_token}}' },
+                data: {
+                    question_pk: questionId,
+                    answer: rate,
+                },
+            }).done(function() {
+                window.location.reload();
+            })
+            .fail(function() {
+                alert( "error" );
+            })
+        }
+
+        function likeAnswer(evt){
+            const questionId = this.dataset.question;
+            let like = true;
+            if(this.dataset.value === 'dislike') {
+                like = false;
+            }
+            
+            $.ajax({
+                type: 'POST',
+                url: "{%url 'survey:question-like' %}",
+                headers: { 'X-CSRFToken': '{{csrf_token}}' },
+                data: {
+                    question_pk: questionId,
+                    like: like,
+                },
+            }).done(function() {
+                window.location.reload();
+            })
+            .fail(function() {
+                alert( "error" );
+            })
+        }
 
 
+        document.querySelectorAll('a.answer').
+        forEach(answer => {
+            answer.addEventListener('click', rateAnswer);
+        });
+
+        document.querySelectorAll('a.like').
+        forEach(answer => {
+            answer.addEventListener('click', likeAnswer);
+        });
     </script>
-
 {% endblock %}

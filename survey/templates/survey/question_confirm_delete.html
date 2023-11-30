@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p>¿Está completamente seguro de borrar la pregunta "{{ object.title }}"?</p>
+        {{ form }}
+        <input class="btn btn-danger" type="submit" value="Confirmar" />
+        <input id="btn-cancel"
+               class="btn btn-primary"
+               type="button"
+               value="Cancelar" />
+    </form>
+{% endblock %}
+{% block js %}
+    <script>
+        document.getElementById('btn-cancel').addEventListener('click', (evt) => {
+            window.location.href = "{% url 'survey:question-list' %}";
+            evt.preventDefault();
+            return false;   
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,529 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add question",
+      "content_type": 7,
+      "codename": "add_question"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change question",
+      "content_type": 7,
+      "codename": "change_question"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete question",
+      "content_type": 7,
+      "codename": "delete_question"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view question",
+      "content_type": 7,
+      "codename": "view_question"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add like",
+      "content_type": 8,
+      "codename": "add_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change like",
+      "content_type": 8,
+      "codename": "change_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete like",
+      "content_type": 8,
+      "codename": "delete_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view like",
+      "content_type": 8,
+      "codename": "view_like"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add answer",
+      "content_type": 9,
+      "codename": "add_answer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change answer",
+      "content_type": 9,
+      "codename": "change_answer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete answer",
+      "content_type": 9,
+      "codename": "delete_answer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view answer",
+      "content_type": 9,
+      "codename": "view_answer"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$r9Bkla9OFQDRRcnmAGdvxo$/KXN5RKwWpRFaiQIUHRlo2kGfe2CG0twgVkXTy/K1PM=",
+      "last_login": "2023-11-28T23:45:38.968Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-11-28T23:45:32.771Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$XGORcEO28voSNWFmkEG8WB$DH85k/LzX4QDvpfyjKfoLm/7u1D/IzAeI9RnNiQfK78=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin2",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin2@admin2.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-11-30T01:29:33.146Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "survey",
+      "model": "question"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "survey",
+      "model": "like"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "survey",
+      "model": "answer"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ol54omrqq6vj57galkbzv8kt73n8inya",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAUBe_C2pB-Clhcuu8Zmgd8pGogKe3KeHdt0oVu38y8l5iwrXnaGi_THMVFkDj9bh7hwWUH8Y5yqzLUsi6zl7siD9rkWCM_r4f7d5DR8re28DxoglMUgaCYdG81SLEzOgXrdSJDzABz7zxgTHBdiPbMvhuQxPsD_wM5Cg:1r87lq:Agr8tvt04Zz8mY3oCWJetIo-DOxPTLcG_6yRHmKQFik",
+      "expire_date": "2023-12-12T23:45:38.973Z"
+    }
+  },
+  {
+    "model": "survey.question",
+    "pk": 1,
+    "fields": {
+      "created": "2023-11-28",
+      "author": 1,
+      "title": "¿Ha considerado cambiar de trabajo?",
+      "description": "Evalúa estadía"
+    }
+  },
+  {
+    "model": "survey.question",
+    "pk": 2,
+    "fields": {
+      "created": "2023-11-29",
+      "author": 2,
+      "title": "¿Cuánto tarda conseguir una reunión con mi jefautra?",
+      "description": "Evalúa tiempos de respuestas"
+    }
+  },
+  {
+    "model": "survey.question",
+    "pk": 3,
+    "fields": {
+      "created": "2023-11-29",
+      "author": 1,
+      "title": "¿Qué le pareció este prueba?",
+      "description": "El test recién hecho"
+    }
+  },
+  {
+    "model": "survey.answer",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "author": 1,
+      "value": 3,
+      "comment": ""
+    }
+  },
+  {
+    "model": "survey.answer",
+    "pk": 2,
+    "fields": {
+      "question": 2,
+      "author": 1,
+      "value": 5,
+      "comment": ""
+    }
+  },
+  {
+    "model": "survey.answer",
+    "pk": 3,
+    "fields": {
+      "question": 3,
+      "author": 1,
+      "value": 1,
+      "comment": ""
+    }
+  },
+  {
+    "model": "survey.like",
+    "pk": 1,
+    "fields": {
+      "author": 1,
+      "question": 1,
+      "value": false
+    }
+  },
+  {
+    "model": "survey.like",
+    "pk": 2,
+    "fields": {
+      "author": 1,
+      "question": 2,
+      "value": false
+    }
+  },
+  {
+    "model": "survey.like",
+    "pk": 3,
+    "fields": {
+      "author": 1,
+      "question": 3,
+      "value": true
+    }
+  }
+]

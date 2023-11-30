@@ -10,3 +10,8 @@ db.sqlite3
 /postgresql
 /pgadmin
 /database
+/venv
+/.python-version
+/.vscode
+/.pytest_cache
+/.python-version

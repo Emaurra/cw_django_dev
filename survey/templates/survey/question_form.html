@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
-
 {% block content %}
-    <h1>Hacer pregunta</h1>
+    {% if action == 'create' %}
+        <h1>Hacer pregunta</h1>
+    {% elif action == 'edit' %}
+        <h1>Editar pregunta</h1>
+    {% endif %}
     <div class="d-flex">
-        <form method="post">{% csrf_token %}
+        <form method="post">
+            {% csrf_token %}
             {{ form.as_p }}
-            <hr>
-            <input class="btn btn-primary" type="submit" value="Guardar">
+            <hr />
+            <input class="btn btn-primary" type="submit" value="Guardar" />
         </form>
     </div>
 {% endblock %}
